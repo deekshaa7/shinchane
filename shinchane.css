@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } 
+  
+  body {
+    background-color: #b0cac7;
+  }
+  
+  .head {
+  
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+   align-items: center;
+  
+  }
+  
+  .face {
+    width: 250px;
+    height: 250px;
+    background-color: #ffb78c;
+    border-radius: 70% 65% 90% / 70% 50% 70% 65%;
+    position: absolute;
+    border: 2px solid #000;
+  }
+  
+  .face::before {
+    content: '';
+    width: 65px;
+    height: 80px;
+    background: #ffb78e;
+    transform: translate(-60px, 100px) rotate(-10deg);
+    border-radius: 80% 65% 73% 80% / 80% 40% 30% 70%;
+    position: absolute;
+    border-top: 2px solid #000;
+    border-left: 2px solid#000;
+    border-bottom: 2px solid #000;
+  }
+  
+  .face::after {
+    content: '';
+    width: 155px;
+    height: 149px;
+    background: #ffb78e;
+    transform: translate(145px, 98px);
+    border-radius: 90% 65% 80% 90% / 40% 100% 70% 60%;
+    position: absolute;
+    border-right: 4px solid #000;
+  }
+  
+  .hair {
+    width: 150px;
+    height: 15px;
+    background: #000;
+    position: absolute;
+    border-radius: 45% 65% 0% 100% / 100% 100% 0% 0%;
+    top: -2px;
+    left: 39px;
+  }
+  
+  .hair::before {
+    content: '';
+    width: 100px;
+    height: 140px;
+    background: #000;
+    position: absolute;
+    border-radius: 100% 0% 0% 100% / 100% 0% 100% 0%;
+    top: -5px;
+    left: -49px;
+    z-index: -1;
+    transform: rotate(19deg);
+  }
+  
+  .eyebrowleft {
+    width: 67px;
+    height: 25px;
+    background: #000;
+    position: absolute;
+    border-radius: 30px;
+    top: 12px;
+    left: 9px;
+    transform: rotate(137deg);
+    animation: ani 0.4s infinite ease-in-out;
+  }
+  
+  .eyebrowleft::after {
+    content: '';
+    width: 67px;
+    height: 25px;
+    background: #000;
+    position: absolute;
+    border-radius: 30px;
+    top: -24px;
+    right: 25px;
+    transform: rotate(85deg);
+  }
+  
+  .eyebrowRight {
+    position: absolute;
+    width: 67px;
+    height: 25px;
+    background: #000;
+    border-radius: 30px;
+    top: 12px;
+    right: 9px;
+    transform: rotate(137deg);
+    animation: ani 0.4s infinite ease-in-out;
+    margin-right: 15%;
+  }
+  
+  .eyebrowRight::after {
+    content: '';
+    width: 67px;
+    height: 25px;
+    background: #000;
+    position: absolute;
+    border-radius: 30px;
+    top: -24px;
+    right: 25px;
+    transform: rotate(85deg);
+  }
+  
+  @keyframes ani {
+    to {
+      top: -0.01px
+    }
+  }
+  
+  .eyeleft {
+    position: absolute;
+    background: #000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    top: 80px;
+    left: 43px;
+  }
+  .eyeleft::before{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 60px;
+    border-top: 4px solid #000;
+    border-radius: 53% 47% 45% 55% / 57% 36% 64% 43%;
+    top: -25px;
+    left: -15px;
+  }
+  .eyeleft::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 26px;
+    height: 23px;
+    border-radius: 50%;
+    top: 16px;
+    left: 20px;
+  }
+  .eyeRight{
+    position: absolute;
+    background: #000;
+    width: 68px;
+    height: 60px;
+    border-radius: 50%;
+    top: 80px;
+    left: 143px;
+    z-index: 2;
+  }
+  .eyeRight::before{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 60px;
+    border-top: 4px solid #000;
+    border-radius: 53% 47% 45% 55% / 57% 36% 64% 43%;
+    top: -25px;
+    left: -2px;
+  }
+  .eyeRight::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 26px;
+    height: 23px;
+    border-radius: 50%;
+    top: 16px;
+    left: 19px;
+  }
+  .mouth{
+    position: absolute;
+    width: 45px;
+    height: 60px;
+    background: rgb(165,67,84);
+    border-radius: 50%;
+    border: 2px solid #000;
+    top: 205px;
+    right: 50px;
+    z-index: 2;
+    animation: talk 2s infinite ease-in-out;
+  }
+  @keyframes talk {
+    0%{
+      transform: scale(0.3 , 0.5);
+    }
+    10%{
+      transform: scale(1,1);
+    }
+    20%{
+      transform: scale(0.3 , 0.5);
+    }
+    30%{
+      transform: scale(1,1);
+    }
+    40%{
+      transform: scale(0.3 , 0.7);
+    }
+    60%{
+      transform: scale(1 , 1);
+    }
+    80%{
+      transform: scale(0.8 , 0.3);
+    }
+    100%{
+      transform: scale(0.5 , 0.9);
+    }
+  }
